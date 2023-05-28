@@ -1,3 +1,6 @@
+# What is this?
+This tool is used for taking screenshots of webpages
+
 # Install Python Packages
 Website for screenshotting websites. Lines to install all required packages follows.
 
