@@ -1,0 +1,6 @@
+88EB82WF8Y7QVQ1S60ZCD11P - Message: Malformed URL: URL constructor: kjartan.io/ is not a valid URL.
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:183:5
+InvalidArgumentError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:312:5
+GeckoDriver.prototype.navigateTo@chrome://remote/content/marionette/driver.sys.mjs:828:11
