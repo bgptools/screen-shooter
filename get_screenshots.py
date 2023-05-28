@@ -9,7 +9,7 @@ firefox_options = Options()
 firefox_options.add_argument("--headless")
 
 # Define and set the user agent to override blocks based on user-agents
-user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Firefox/90.0"
+user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0"
 firefox_options.set_preference("general.useragent.override", user_agent)
 
 
