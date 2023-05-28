@@ -50,6 +50,9 @@ apt-get install firefox-esr
 
 i don't know how to test this one
 
+# Running it
+hypercorn --bind 127.0.0.1:5000 main
+
 # Credits
 
 This screenshotting website utility was made for [BGP.TOOLS](https://bgp.tools) by [Ryan G](https://erate.rs) (eraters) https://github.com/eraters
