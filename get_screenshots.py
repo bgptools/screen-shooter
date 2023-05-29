@@ -19,7 +19,7 @@ def get_screenshot(u_are_L):
 
         for file in os.listdir('./extensions'):
             if file.endswith('.xpi'):
-	                driver.install_addon(f'./extensions/{file}', temporary=True)
+                driver.install_addon(f'./extensions/{file}', temporary=True)
 
         # Set the screenshot size (this is 4:3 as far as i know, can change it to whatever if you want to make it 16:9 or whatever in the future)
         driver.set_window_size(1024, 853) # 768 + 85 because unknown bug
@@ -39,12 +39,15 @@ def get_screenshot(u_are_L):
         # Take the screenshot
         driver.save_screenshot("temp_screenshot.png")
 
-        # Exit the webdriver (refer to line UPDATEWHENSCRIPTDONE)
-        driver.quit()
-
-        # Let us know that the screenshot was successfully gotten (W)
-        return True, 'Success!'
+        done = True
     # Catch errors
     except Exception as error:
+        done = False
+    # Quit the driver (out of try/except due to memory leaks & instance leaks)
+    driver.quit()
+    if done == True:
+        #Let us know that the screenshot was successfully gotten (W)
+        return True, 'Success!'
+    else:
         # Return a list of [False, (whatever the error is)]
         return False, error
