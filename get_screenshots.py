@@ -1,4 +1,3 @@
-# Do the pro gamer imports
 import os
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
@@ -14,7 +13,6 @@ firefox_options.set_preference("general.useragent.override", user_agent)
 
 
 def get_screenshot(u_are_L):
-    # make sure it gets the scweenshot uwu (i hated typing this)
     try:
         # Initialize webdriver for Firefox
         driver = webdriver.Firefox(options=firefox_options)
