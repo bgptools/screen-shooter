@@ -23,4 +23,4 @@ async def index(url):
             return "Something went wrong. Debugging logs are not enabled, so you do not have a code."
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=1711)

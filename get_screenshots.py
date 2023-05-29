@@ -9,7 +9,7 @@ firefox_options = Options()
 firefox_options.add_argument("--headless")
 
 # Define and set the user agent to override blocks based on user-agents
-user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Firefox/90.0"
+user_agent = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/113.0"
 firefox_options.set_preference("general.useragent.override", user_agent)
 
 
@@ -21,10 +21,10 @@ def get_screenshot(u_are_L):
 
         for file in os.listdir('./extensions'):
             if file.endswith('.xpi'):
-                driver.install_addon(f'./extensions/{file}', temporary=True)
+	                driver.install_addon(f'./extensions/{file}', temporary=True)
 
         # Set the screenshot size (this is 4:3 as far as i know, can change it to whatever if you want to make it 16:9 or whatever in the future)
-        driver.set_window_size(1024, 768)
+        driver.set_window_size(1024, 853) # 768 + 85 because unknown bug
 
         # Honestly, I really do not know what this does. All I know is that the script needs it.
         # According to VSCode:
