@@ -1,3 +1,6 @@
+# What is this?
+This tool is used for taking screenshots of webpages
+
 # Install Python Packages
 Website for screenshotting websites. Lines to install all required packages follows.
 
@@ -49,6 +52,9 @@ apt-get install firefox-esr
 ```
 
 i don't know how to test this one
+
+# Running it
+hypercorn --bind 127.0.0.1:5000 main
 
 # Credits
 

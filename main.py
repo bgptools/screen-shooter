@@ -17,7 +17,7 @@ async def index(url):
         if debug_logs == True:
             with open('logs.txt', 'a') as file:
                 debug_code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=24))
-                file.write(f"{debug_code} - {attempt_ss[1]}")
+                file.write(f"{debug_code} - {attempt_ss[1]}\n")
                 return f"Something went wrong, and your debug code is {debug_code}"
         else:
             return "Something went wrong. Debugging logs are not enabled, so you do not have a code."
